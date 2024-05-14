@@ -21,7 +21,7 @@ class Server:
         self.buyer_queue.append(buyer)
         buyer.position = len(self.buyer_queue)
         self.id += 1
-        return len(self.buyer_queue), buyer.position
+        return buyer.position, buyer.id
     
     def get_len_queue(self):
         return len(self.buyer_queue)
